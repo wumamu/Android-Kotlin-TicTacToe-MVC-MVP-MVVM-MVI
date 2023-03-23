@@ -1,6 +1,7 @@
-package com.example.tictactoe
+package com.example.tictactoe.Model
 
 import android.content.Context
+import com.example.tictactoe.R
 
 class TicTacToeGame {
 

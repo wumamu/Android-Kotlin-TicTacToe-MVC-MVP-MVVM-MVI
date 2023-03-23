@@ -1,4 +1,4 @@
-package com.example.tictactoe
+package com.example.tictactoe.Controller
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -6,6 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import com.example.tictactoe.R
+import com.example.tictactoe.Model.TicTacToeGame
 
 class MainActivity : AppCompatActivity() {
 
@@ -19,7 +21,6 @@ class MainActivity : AppCompatActivity() {
             val (row, col) = button.tag.toString().split("_").map {
                 it.toInt()
             }
-
             game.pressButtonAt(row, col)
             button.isEnabled = false
             button.text = game.stringForButtonAt(row, col)
