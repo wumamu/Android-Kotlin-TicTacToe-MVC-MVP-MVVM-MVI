@@ -1,4 +1,4 @@
-package com.example.tictactoe.Model
+package com.example.tictactoe.model
 
 import android.content.Context
 import com.example.tictactoe.R
