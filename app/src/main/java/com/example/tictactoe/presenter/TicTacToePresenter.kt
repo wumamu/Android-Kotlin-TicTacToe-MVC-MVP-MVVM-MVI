@@ -5,7 +5,7 @@ import com.example.tictactoe.model.TicTacToeGame
 import com.example.tictactoe.view.TicTacToeView
 
 class TicTacToePresenter(private val view: TicTacToeView, private val context: Context): Presenter {
-    var game: TicTacToeGame
+    private var game: TicTacToeGame
 
     init {
         game = TicTacToeGame(context = context)
@@ -16,11 +16,6 @@ class TicTacToePresenter(private val view: TicTacToeView, private val context: C
         onRestart()
     }
 
-    override fun onResume() {}
-
-    override fun onPause() {}
-
-    override fun onDestroy() {}
 
     fun onButtonSelected(row: Int, col: Int) {
         game.pressButtonAt(row, col)
@@ -36,4 +31,10 @@ class TicTacToePresenter(private val view: TicTacToeView, private val context: C
         view.clearGame()
         view.setTextViewText(game.stringForGameState())
     }
+
+    override fun onResume() {}
+
+    override fun onPause() {}
+
+    override fun onDestroy() {}
 }
