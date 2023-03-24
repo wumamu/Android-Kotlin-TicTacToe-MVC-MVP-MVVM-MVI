@@ -7,6 +7,12 @@ android {
     namespace 'com.example.tictactoe'
     compileSdk 33
 
+    buildFeatures{
+        dataBinding = true
+        viewBinding = true
+    }
+
+
     defaultConfig {
         applicationId "com.example.tictactoe"
         minSdk 24
@@ -41,4 +47,9 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1'
+    implementation 'androidx.databinding:databinding-runtime:7.4.2'
+    implementation "androidx.activity:activity-ktx:1.7.0"
+    implementation "androidx.fragment:fragment-ktx:1.5.6"
+
 }
