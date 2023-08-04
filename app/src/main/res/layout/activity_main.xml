@@ -22,7 +22,7 @@
             android:textColor="@color/colorText"
             android:textStyle="bold"
             android:textSize="24sp"
-            android:text="@{viewModel.textViewText}"
+            android:text="@{viewModel.textViewText()}"
             />
 
         <GridLayout
